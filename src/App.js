@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
 import StatePopulation from './components/StatePopulation/StatePopulation';
 import StatePopulationYear from './components/StatePopulationYear/StatePopulationYear';
@@ -51,7 +51,6 @@ function App() {
 					<Route path="/Statepopulationyear">
 						<StatePopulationYear dataUSA={dataUSA} statesData={statesData} />
 					</Route>
-                                        <Redirect to={'/'}/>
 				</Switch>
 			</Router>
 		</div>
