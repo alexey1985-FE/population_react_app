@@ -16,9 +16,7 @@ function App() {
 			.get(`${API_URL}?drilldowns=Year&measures=Population`)
 			.then(response => setDataUSA(response.data.data))
 			.catch(error => console.log(error));
-	}, []);
 
-	useEffect(() => {
 		axios
 			.get(`${API_URL}?drilldowns=State&measures=Population`)
 			.then(response => setStatesData(response.data.data))
